@@ -1,0 +1,58 @@
+[
+    {
+        "prompt": "Write a C program to print your own name.",
+        "response": "#include <stdio.h>\\n\\nint main() {\\n    printf(\"Your Name\\n\");\\n    return 0;\\n}"
+    },
+    {
+        "prompt": "Write a C program to print an integer entered by the user.",
+        "response": "#include <stdio.h>\\n\\nint main() {\\n    int num;\\n    printf(\"Enter an integer: \");\\n    scanf(\"%d\", &num);\\n    printf(\"You entered: %d\\n\", num);\\n    return 0;\\n}"
+    },
+    {
+        "prompt": "Write a C program to add two numbers.",
+        "response": "#include <stdio.h>\\n\\nint main() {\\n    int a, b, sum;\\n    printf(\"Enter two integers: \");\\n    scanf(\"%d %d\", &a, &b);\\n    sum = a + b;\\n    printf(\"Sum: %d\\n\", sum);\\n    return 0;\\n}"
+    },
+    {
+        "prompt": "Write a C program to check whether a number is prime or not.",
+        "response": "#include <stdio.h>\\n#include <stdbool.h>\\n\\nbool isPrime(int num) {\\n    if (num <= 1) return false;\\n    for (int i = 2; i * i <= num; i++) {\\n        if (num % i == 0) return false;\\n    }\\n    return true;\\n}\\n\\nint main() {\\n    int num;\\n    printf(\"Enter an integer: \");\\n    scanf(\"%d\", &num);\\n    if (isPrime(num)) {\\n        printf(\"%d is a prime number.\\n\", num);\\n    } else {\\n        printf(\"%d is not a prime number.\\n\", num);\\n    }\\n    return 0;\\n}"
+    },
+    {
+        "prompt": "Write a C program to multiply two floating-point numbers.",
+        "response": "#include <stdio.h>\\n\\nint main() {\\n    float a, b, product;\\n    printf(\"Enter two floating-point numbers: \");\\n    scanf(\"%f %f\", &a, &b);\\n    product = a * b;\\n    printf(\"Product: %.2f\\n\", product);\\n    return 0;\\n}"
+    },
+    {
+        "prompt": "Write a C program to print the ASCII value of a character.",
+        "response": "#include <stdio.h>\\n\\nint main() {\\n    char ch;\\n    printf(\"Enter a character: \");\\n    scanf(\"%c\", &ch);\\n    printf(\"ASCII value of %c is %d\\n\", ch, (int)ch);\\n    return 0;\\n}"
+    },
+    {
+        "prompt": "Write a C program to swap two numbers.",
+        "response": "#include <stdio.h>\\n\\nint main() {\\n    int a, b, temp;\\n    printf(\"Enter two integers: \");\\n    scanf(\"%d %d\", &a, &b);\\n    temp = a;\\n    a = b;\\n    b = temp;\\n    printf(\"After swapping: a = %d, b = %d\\n\", a, b);\\n    return 0;\\n}"
+    },
+    {
+        "prompt": "Write a C program to convert Fahrenheit to Celsius.",
+        "response": "#include <stdio.h>\\n\\nint main() {\\n    float fahrenheit, celsius;\\n    printf(\"Enter temperature in Fahrenheit: \");\\n    scanf(\"%f\", &fahrenheit);\\n    celsius = (fahrenheit - 32) * 5 / 9;\\n    printf(\"Temperature in Celsius: %.2f\\n\", celsius);\\n    return 0;\\n}"
+    },
+    {
+        "prompt": "Write a C program to find the size of `int`, `float`, `double`, and `char`.",
+        "response": "#include <stdio.h>\\n\\nint main() {\\n    printf(\"Size of int: %zu bytes\\n\", sizeof(int));\\n    printf(\"Size of float: %zu bytes\\n\", sizeof(float));\\n    printf(\"Size of double: %zu bytes\\n\", sizeof(double));\\n    printf(\"Size of char: %zu bytes\\n\", sizeof(char));\\n    return 0;\\n}"
+    },
+    {
+        "prompt": "Write a C program to add two complex numbers.",
+        "response": "#include <stdio.h>\\n\\ntypedef struct {\\n    float real;\\n    float imag;\\n} Complex;\\n\\nint main() {\\n    Complex c1, c2, sum;\\n    printf(\"Enter real and imaginary parts of first complex number: \");\\n    scanf(\"%f %f\", &c1.real, &c1.imag);\\n    printf(\"Enter real and imaginary parts of second complex number: \");\\n    scanf(\"%f %f\", &c2.real, &c2.imag);\\n    sum.real = c1.real + c2.real;\\n    sum.imag = c1.imag + c2.imag;\\n    printf(\"Sum = %.2f + %.2fi\\n\", sum.real, sum.imag);\\n    return 0;\\n}"
+    },
+    {
+        "prompt": "Write a C program to print prime numbers from 1 to N.",
+        "response": "#include <stdio.h>\\n#include <stdbool.h>\\n\\nbool isPrime(int num) {\\n    if (num <= 1) return false;\\n    for (int i = 2; i * i <= num; i++) {\\n        if (num % i == 0) return false;\\n    }\\n    return true;\\n}\\n\\nint main() {\\n    int N;\\n    printf(\"Enter the value of N: \");\\n    scanf(\"%d\", &N);\\n    printf(\"Prime numbers from 1 to %d are: \\n\", N);\\n    for (int i = 1; i <= N; i++) {\\n        if (isPrime(i)) {\\n            printf(\"%d \\n\", i);\\n        }\\n    }\\n    return 0;\\n}"
+    },
+    {
+        "prompt": "Write a C program to find the simple interest.",
+        "response": "#include <stdio.h>\\n\\nint main() {\\n    float principal, rate, time, interest;\\n    printf(\"Enter principal amount: \");\\n    scanf(\"%f\", &principal);\\n    printf(\"Enter rate of interest: \");\\n    scanf(\"%f\", &rate);\\n    printf(\"Enter time in years: \");\\n    scanf(\"%f\", &time);\\n    interest = (principal * rate * time) / 100;\\n    printf(\"Simple Interest: %.2f\\n\", interest);\\n    return 0;\\n}"
+    },
+    {
+        "prompt": "Write a C program to find the compound interest.",
+        "response": "#include <stdio.h>\\n#include <math.h>\\n\\nint main() {\\n    float principal, rate, time, amount, interest;\\n    printf(\"Enter principal amount: \");\\n    scanf(\"%f\", &principal);\\n    printf(\"Enter rate of interest: \");\\n    scanf(\"%f\", &rate);\\n    printf(\"Enter time in years: \");\\n    scanf(\"%f\", &time);\\n    amount = principal * pow((1 + rate / 100), time);\\n    interest = amount - principal;\\n    printf(\"Compound Interest: %.2f\\n\", interest);\\n    return 0;\\n}"
+    },
+    {
+        "prompt": "Write a C program to find the area and perimeter of a rectangle.",
+        "response": "#include <stdio.h>\\n\\nint main() {\\n    float length, width, area, perimeter;\\n    printf(\"Enter length and width of the rectangle: \");\\n    scanf(\"%f %f\", &length, &width);\\n    area = length * width;\\n    perimeter = 2 * (length + width);\\n    printf(\"Area: %.2f\\n\", area);\\n    printf(\"Perimeter: %.2f\\n\", perimeter);\\n    return 0;\\n}"
+    }
+]
